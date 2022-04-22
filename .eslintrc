@@ -1,0 +1,39 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_"
+        }
+      ]
+    },
+    "overrides": [
+      {
+        "files": "**/__tests__/**",
+        "env": {
+          "jest": true
+        },
+        "rules": {
+          "@typescript-eslint/no-var-requires": "off"
+        }
+      }
+    ]
+  }
