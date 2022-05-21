@@ -20,6 +20,7 @@ ruleTester.run('sort-object-expression-key/object-properties', rule, {
       [\`${1}\`]: 5,
       1234: 6,
       a: 1,
+      [\`${TestEnum.A}/${TestEnum.B}\`]: 3,
       b: 3,
       [TestEnum.A]: 2,
       [TestEnum.B]: 4,

@@ -56,7 +56,7 @@ export function groupNodes(properties: (Property)[]) {
 
 
 export function getName(node?: Property): string {
-    switch (node?.key.type) {
+    switch (node?.key?.type) {
       case "Identifier":
         return node.key.name
   
